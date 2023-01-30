@@ -1,0 +1,27 @@
+.app {
+  background-color: #242424;
+  text-align: center;
+  padding: 1em;
+}
+
+.item {
+  width: 100%;
+  padding: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 5px solid grey;
+  border-radius: 5px;
+
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 1200ms ease-out, transform 600ms ease-out,
+  visibility 1200ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+
+.item.active {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
